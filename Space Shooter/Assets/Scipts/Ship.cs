@@ -34,7 +34,10 @@ public class Ship : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        TakeDamage();
+        if(collision.gameObject.name != ("GameObject"))
+        {
+            TakeDamage();
+        }
     }
 
     public void TakeDamage()

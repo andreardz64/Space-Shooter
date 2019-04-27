@@ -29,11 +29,8 @@ public class Meteor : MonoBehaviour
     {
         if (collision.gameObject.name == "Misile1")
         {
-            life=life-1;
-        }
-        if (life==0)
-        {
-            Destroy(gameObject);
+            life = life - 1;
+            if (life <= 0) Die();
         }
     }
 
@@ -42,5 +39,11 @@ public class Meteor : MonoBehaviour
         yield return new WaitForSeconds(lifetime);
         Destroy(gameObject);
     }
+
+    protected virtual void Die()
+    {
+        Destroy(gameObject);
+        }
+
 }
 
