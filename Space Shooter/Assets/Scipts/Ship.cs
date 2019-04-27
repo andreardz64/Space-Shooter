@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Ship : MonoBehaviour
 {
-
+    public Canvas GameOver;
     public float life;
     public int speed;
     public GameObject shootPoint;
@@ -13,6 +13,7 @@ public class Ship : MonoBehaviour
 
     private void Awake()
     {
+        GameOver.enabled = false;
         life = 5;
         characterColor = gameObject.GetComponent<SpriteRenderer>().color;
         speed = 8;
@@ -52,6 +53,8 @@ public class Ship : MonoBehaviour
     {
         Destroy(gameObject);
         Debug.Log("Game Over");
+        GameOver.enabled = true;
+        Time.timeScale = 0;
     }
 
     public IEnumerator RestoreColor()

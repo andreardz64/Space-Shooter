@@ -10,7 +10,7 @@ public class misile2 : MonoBehaviour
     void Start()
     {
         speed = -9;
-        lifetime = 2;
+        lifetime = 4;
         GetComponent<Rigidbody2D>().velocity = new Vector2(speed, 0);
         StartCoroutine(DestroyBullet());
     }

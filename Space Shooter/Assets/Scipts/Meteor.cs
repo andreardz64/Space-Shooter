@@ -13,7 +13,7 @@ public class Meteor : MonoBehaviour
     void Start()
     {
         life = 5;
-        lifetime = 4;
+        lifetime = 6;
         speed = -0.05f;
         StartCoroutine(DestroyBullet());
     }

@@ -1,7 +1,7 @@
 ﻿<Properties StartupConfiguration="{28FCF307-BCEB-DF00-C466-08C29A16E02D}|">
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scipts/Meteor.cs">
     <Files>
-      <File FileName="Assets/Scipts/Meteor.cs" Line="30" Column="57" />
+      <File FileName="Assets/Scipts/Meteor.cs" Line="16" Column="21" />
       <File FileName="Assets/Scipts/Ship.cs" Line="37" Column="56" />
       <File FileName="Assets/Scipts/enemy.cs" Line="33" Column="58" />
       <File FileName="Assets/Scipts/misile1.cs" Line="30" Column="6" />

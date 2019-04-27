@@ -7,6 +7,7 @@ public class enemy : MonoBehaviour
     public GameObject misile;
     public GameObject shootPoint;
     public int life;
+    public int speed;
     public GameObject ship;
     public float shipX;
     public float shipY;
@@ -15,6 +16,7 @@ public class enemy : MonoBehaviour
 
     void Start()
     {
+        speed = 3;
         shipX = ship.transform.position.x;
         shipY = ship.transform.position.y;
         life = 3;
@@ -51,10 +53,26 @@ public class enemy : MonoBehaviour
 
     void Move()
     {
-        GetComponent<Rigidbody2D>().velocity = new Vector2 (shipX - transform.position.x, shipY - transform.position.y);
+        GetComponent<Rigidbody2D>().velocity = NormalizeSpeed (shipX - transform.position.x, shipY - transform.position.y);
     }
 
 
+    protected Vector2 NormalizeSpeed(float x, float y)
+    {
+        float xSpeed;
+        float ySpeed;
+        if (x != 0 && y != 0)
+        {
+            xSpeed = Mathf.Sin(Mathf.PI / 4) * speed * x;
+            ySpeed = Mathf.Sin(Mathf.PI / 4) * speed * y;
+        }
+        else
+        {
+            xSpeed = x != 0 ? speed * x : 0;
+            ySpeed = y != 0 ? speed * y : 0;
+        }
 
+        return new Vector2(xSpeed, ySpeed);
+    }
 
 }
