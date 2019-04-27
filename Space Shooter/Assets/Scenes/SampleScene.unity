@@ -348,6 +348,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ship1
       objectReference: {fileID: 0}
+    - target: {fileID: 4659357273084672143, guid: 89e48945c02a24836bd644a2173c079a,
+        type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 4659357273084672137, guid: 89e48945c02a24836bd644a2173c079a,
         type: 3}
       propertyPath: m_LocalPosition.x

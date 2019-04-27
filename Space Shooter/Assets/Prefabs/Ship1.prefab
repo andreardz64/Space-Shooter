@@ -45,7 +45,7 @@ GameObject:
   - component: {fileID: 6499689988141757346}
   m_Layer: 0
   m_Name: Ship1
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -172,6 +172,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8bccacb2e79649f8886d894988d048c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  GameOver: {fileID: 0}
   life: 5
   speed: 0
   shootPoint: {fileID: 4659357272832449123}

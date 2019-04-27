@@ -7,20 +7,22 @@ public class enemy : MonoBehaviour
     public GameObject misile;
     public GameObject shootPoint;
     public int life;
-    public int speed;
-    public GameObject ship;
+    public float speed;
+    private GameObject ship;
     public float shipX;
     public float shipY;
-   
-
+    public int lifetime;
 
     void Start()
     {
-        speed = 3;
+        ship = GameObject.FindGameObjectWithTag("Player");
+        speed = 0.5f;
+        lifetime = 5;
         shipX = ship.transform.position.x;
         shipY = ship.transform.position.y;
         life = 3;
         StartCoroutine(Shoot());
+        StartCoroutine(DestroyBullet());
     }
 
     public IEnumerator Shoot()
@@ -56,6 +58,11 @@ public class enemy : MonoBehaviour
         GetComponent<Rigidbody2D>().velocity = NormalizeSpeed (shipX - transform.position.x, shipY - transform.position.y);
     }
 
+    IEnumerator DestroyBullet()
+    {
+        yield return new WaitForSeconds(lifetime);
+        Destroy(gameObject);
+    }
 
     protected Vector2 NormalizeSpeed(float x, float y)
     {
