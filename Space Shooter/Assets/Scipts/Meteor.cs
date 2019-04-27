@@ -25,9 +25,9 @@ public class Meteor : MonoBehaviour
         transform.position = position;
     }
 
-    void OnCollisionEnter2D(Collision2D collision)
+    void OnCollisionEnter2D(Collision2D col)
     {
-        if (collision.gameObject.name == "Misile1")
+        if (col.gameObject.name == "Misile1")
         {
             life = life - 1;
             if (life <= 0) Die();

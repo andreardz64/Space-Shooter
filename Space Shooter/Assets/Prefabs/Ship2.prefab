@@ -144,6 +144,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   misile: {fileID: 1710336626310288714, guid: 6899924b97651401eb792244beb5ce54, type: 3}
   shootPoint: {fileID: 4303310078833412762}
+  life: 0
+  ship: {fileID: 4659357273084672143, guid: 89e48945c02a24836bd644a2173c079a, type: 3}
+  shipX: 0
+  shipY: 0
 --- !u!1 &4303310078833412762
 GameObject:
   m_ObjectHideFlags: 0
