@@ -7,9 +7,16 @@ public class enemy : MonoBehaviour
     public GameObject misile;
     public GameObject shootPoint;
     public int life;
+    public GameObject ship;
+    public float shipX;
+    public float shipY;
+   
+
 
     private void Start()
     {
+        shipX = ship.transform.position.x;
+        shipY = ship.transform.position.y;
         life = 3;
         StartCoroutine(Shoot());
     }
@@ -32,6 +39,17 @@ public class enemy : MonoBehaviour
             }
         }
        
+    }
+
+    void Update()
+    {
+       
+        Move();
+    }
+
+    void Move()
+    {
+        GetComponent<Rigidbody2D>().velocity = new Vector2 (shipX - transform.position.x, shipY - transform.position.y);
     }
 
 
