@@ -13,7 +13,7 @@ public class enemy : MonoBehaviour
    
 
 
-    private void Start()
+    void Start()
     {
         shipX = ship.transform.position.x;
         shipY = ship.transform.position.y;
@@ -28,9 +28,9 @@ public class enemy : MonoBehaviour
         StartCoroutine(Shoot());
     }
 
-    void OnCollisionEnter2D(Collision2D col)
+    void OnCollisionEnter2D(Collision2D collision)
     {
-        if (col.gameObject.name == "Misile1")
+        if (collision.gameObject.name ==  "Misile1(Clone)")
         {
             life = life - 1;
             if (life <= 0) Die();
